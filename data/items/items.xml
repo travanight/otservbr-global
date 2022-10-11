@@ -35851,8 +35851,8 @@
 	</item>
 	<item id="23721" article="a" name="loot pouch">
         <attribute key="description" value="A infinity bag where you can hold loot."/>
-        <attribute key="containersize" value="40"/>
-        <attribute key="moveable" value="0"/>
+        <attribute key="containersize" value="20"/>
+        <attribute key="moveable" value="1"/>
 	</item>
 	<item id="23722" article="a" name="gold converter">
 		<attribute key="showCharges" value="1"/>

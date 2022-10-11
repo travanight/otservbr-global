@@ -350,7 +350,7 @@ function Player:onMoveItem(item, count, fromPosition, toPosition, fromCylinder, 
 		end
 		-- Loot Pouch
         if (containerTo:getId() == ITEM_GOLD_POUCH) or (containerTo:getParent():isContainer() and containerTo:getParent():getId() == ITEM_GOLD_POUCH) then
-            self:sendCancelMessage(RETURNVALUE_CONTAINERNOTENOUGHROOM)
+            --self:sendCancelMessage(RETURNVALUE_CONTAINERNOTENOUGHROOM)
             return false
         end
 	end
