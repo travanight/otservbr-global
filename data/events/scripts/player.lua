@@ -348,14 +348,11 @@ function Player:onMoveItem(item, count, fromPosition, toPosition, fromCylinder, 
 			self:sendCancelMessage(RETURNVALUE_CONTAINERNOTENOUGHROOM)
 			return false
 		end
-		-- Gold Pouch
-		if (containerTo:getId() == ITEM_GOLD_POUCH) then
-			if (not (item:getId() == ITEM_CRYSTAL_COIN or item:getId() == ITEM_PLATINUM_COIN
-			or item:getId() == ITEM_GOLD_COIN)) then
-				self:sendCancelMessage("You can move only money to this container.")
-				return false
-			end
-		end
+		-- Loot Pouch
+        if (containerTo:getId() == ITEM_GOLD_POUCH) or (containerTo:getParent():isContainer() and containerTo:getParent():getId() == ITEM_GOLD_POUCH) then
+            self:sendCancelMessage(RETURNVALUE_CONTAINERNOTENOUGHROOM)
+            return false
+        end
 	end
 
 
